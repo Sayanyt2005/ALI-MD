@@ -7,7 +7,7 @@ cmd({
     pattern: "srepo",
     desc: "Fetch information about a GitHub repository.",
     category: "other",
-    react: "🍃",
+    react: "🤍",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -22,18 +22,18 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const data = response.data;
 
         let repoInfo = `📁_*GITHUB REPOSITORY INFO BY ALI-MD-V1*_📁\n\n`;
-        repoInfo += `📌 *ɴᴀᴍᴇ*: ${data.name}\n`;
-        repoInfo += `🔗 *ᴜʀʟ*: ${data.html_url}\n`;
-        repoInfo += `📝 *ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ*: ${data.description}\n`;
-        repoInfo += `⭐ *ꜱᴛᴀʀꜱ*: ${data.stargazers_count}\n`;
-        repoInfo += `🍴 *ꜰᴏʀᴋꜱ*: ${data.forks_count}\n`;
+        repoInfo += `🧡 *ɴᴀᴍᴇ*: ${data.name}\n`;
+        repoInfo += `💛 *ᴜʀʟ*: ${data.html_url}\n`;
+        repoInfo += `💗 *ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ*: ${data.description}\n`;
+        repoInfo += `🖤 *ꜱᴛᴀʀꜱ*: ${data.stargazers_count}\n`;
+        repoInfo += `🤎 *ꜰᴏʀᴋꜱ*: ${data.forks_count}\n`;
         repoInfo += `\n`;
         repoInfo += `*ALI-MD CREATION*\n`;
 
         await conn.sendMessage(from, { text: repoInfo }, { quoted: mek });
     } catch (e) {
         console.log(e);
-        reply(`Error fetching repository data🤕: ${e.message}`);
+        reply(`Error fetching repository data❤‍🩹: ${e.message}`);
     }
 });
 
